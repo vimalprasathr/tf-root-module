@@ -23,6 +23,7 @@ output "blob_endpoint" {
 }
 
 # ACR
+  
 module "acr" {
   source = "git::https://github.com/vimalprasathr/tf-module.git?ref=v1.0.1"
   resource_group_name = var.resource_group_name
