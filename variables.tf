@@ -51,18 +51,19 @@ variable "client_secret" {
 
 variable "acr_name" {
   type        = string
-  description = "Globally unique name for the Azure Container Registry"
+  description = "Name for the Azure Container Registry"
 }
 
 variable "acr_sku" {
   type        = string
-  description = "SKU for the ACR (Basic, Standard, Premium)"
-  default     = "Basic"
+  description = "SKU for the ACR"
+  default     = "Standard"
 }
 
 variable "admin_enabled" {
   type        = bool
-  description = "Enable admin user for ACR"
+  description = "Enable ACR admin account"
   default     = false
 }
+
 
