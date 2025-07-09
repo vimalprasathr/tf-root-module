@@ -25,7 +25,7 @@ output "blob_endpoint" {
 # ACR
   
 module "acr" {
-  source = "git::https://github.com/vimalprasathr/tf-module.git?ref=v1.0.1"
+  source              = "git::https://github.com/vimalprasathr/tf-module.git//modules/acr?ref=v1.0.0"
   resource_group_name = var.resource_group_name
   location            = var.location
   acr_name            = var.acr_name
@@ -33,3 +33,4 @@ module "acr" {
   admin_enabled       = var.admin_enabled
   tags                = var.tags
 }
+
