@@ -9,7 +9,7 @@ provider "azurerm" {
 
 #storage_account
 module "storage_account" {
-  source                 = "git::https://github.com/vimalprasathr/tf-module.git//modules?ref=v1.0.0"
+  source                 = "git::https://github.com/vimalprasathr/tf-module.git//modules?ref=v1.0.1"
   resource_group_name    = var.resource_group_name
   location               = var.location
   storage_account_name   = var.storage_account_name
