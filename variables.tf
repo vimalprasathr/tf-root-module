@@ -49,19 +49,36 @@ variable "client_secret" {
 }
 # ACR (Azure Container Registry)
 
-variable "acr_name" {
-  description = "The name of the Azure Container Registry"
+variable "resource_group_name" {
   type        = string
+  description = "Name of the Azure resource group"
+}
+
+variable "location" {
+  type        = string
+  description = "Azure region to deploy resources in"
+}
+
+variable "acr_name" {
+  type        = string
+  description = "Globally unique name for the Azure Container Registry"
 }
 
 variable "acr_sku" {
-  description = "The SKU of the Azure Container Registry (e.g. Basic, Standard, Premium)"
   type        = string
+  description = "SKU for the ACR (Basic, Standard, Premium)"
   default     = "Basic"
 }
 
 variable "admin_enabled" {
-  description = "Whether the admin user is enabled for the ACR"
   type        = bool
+  description = "Enable admin user for ACR"
   default     = false
 }
+
+variable "tags" {
+  type        = map(string)
+  description = "Common tags for all resources"
+  default     = {}
+}
+
