@@ -1,3 +1,9 @@
+#Azure authentication
+subscription_id = ""
+tenant_id       = ""
+client_id       = ""
+client_secret   = ""
+
 #storage_account
 resource_group_name  = "rg-app-storage"
 location             = "eastus"
