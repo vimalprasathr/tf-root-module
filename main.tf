@@ -21,3 +21,14 @@ module "storage_account" {
 output "blob_endpoint" {
   value = module.storage_account.primary_blob_endpoint
 }
+
+# ACR
+module "acr" {
+  source              = "./modules/acr"  # or use git source if pushing to remote
+  resource_group_name = var.resource_group_name
+  location            = var.location
+  acr_name            = var.acr_name
+  acr_sku             = var.acr_sku
+  admin_enabled       = var.admin_enabled
+  tags                = var.tags
+}
