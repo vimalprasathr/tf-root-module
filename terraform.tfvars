@@ -1,3 +1,4 @@
+#storage_account
 resource_group_name  = "rg-app-storage"
 location             = "eastus"
 storage_account_name = "myunidfdfsdftorage123"
